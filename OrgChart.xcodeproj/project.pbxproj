@@ -21,6 +21,8 @@
 		A947F3BD17ACCF7F002010C2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A947F39F17ACCF7E002010C2 /* UIKit.framework */; };
 		A947F3C517ACCF7F002010C2 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = A947F3C317ACCF7F002010C2 /* InfoPlist.strings */; };
 		A947F3C717ACCF7F002010C2 /* OrgChartTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A947F3C617ACCF7F002010C2 /* OrgChartTests.m */; };
+		A947F3D117ACCFA1002010C2 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A947F3D017ACCFA1002010C2 /* CoreData.framework */; };
+		A947F3D417ACD0A9002010C2 /* OrgChart.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A947F3D217ACD0A9002010C2 /* OrgChart.xcdatamodeld */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +55,8 @@
 		A947F3C217ACCF7F002010C2 /* OrgChartTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "OrgChartTests-Info.plist"; sourceTree = "<group>"; };
 		A947F3C417ACCF7F002010C2 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		A947F3C617ACCF7F002010C2 /* OrgChartTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = OrgChartTests.m; sourceTree = "<group>"; };
+		A947F3D017ACCFA1002010C2 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A947F3D317ACD0A9002010C2 /* OrgChart.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OrgChart.xcdatamodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A947F3D117ACCFA1002010C2 /* CoreData.framework in Frameworks */,
 				A947F39E17ACCF7E002010C2 /* CoreGraphics.framework in Frameworks */,
 				A947F3A017ACCF7F002010C2 /* UIKit.framework in Frameworks */,
 				A947F39C17ACCF7E002010C2 /* Foundation.framework in Frameworks */,
@@ -101,6 +106,7 @@
 		A947F39A17ACCF7E002010C2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A947F3D017ACCFA1002010C2 /* CoreData.framework */,
 				A947F39B17ACCF7E002010C2 /* Foundation.framework */,
 				A947F39D17ACCF7E002010C2 /* CoreGraphics.framework */,
 				A947F39F17ACCF7E002010C2 /* UIKit.framework */,
@@ -115,6 +121,7 @@
 				A947F3AA17ACCF7F002010C2 /* AppDelegate.h */,
 				A947F3AB17ACCF7F002010C2 /* AppDelegate.m */,
 				A947F3AD17ACCF7F002010C2 /* Main.storyboard */,
+				A947F3D217ACD0A9002010C2 /* OrgChart.xcdatamodeld */,
 				A947F3B017ACCF7F002010C2 /* ViewController.h */,
 				A947F3B117ACCF7F002010C2 /* ViewController.m */,
 				A947F3B317ACCF7F002010C2 /* Images.xcassets */,
@@ -199,6 +206,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Faij Ali";
 				TargetAttributes = {
+					A947F39717ACCF7E002010C2 = {
+						DevelopmentTeam = LK72L5CTJS;
+					};
 					A947F3B817ACCF7F002010C2 = {
 						TestTargetID = A947F39717ACCF7E002010C2;
 					};
@@ -252,6 +262,7 @@
 				A947F3B217ACCF7F002010C2 /* ViewController.m in Sources */,
 				A947F3AC17ACCF7F002010C2 /* AppDelegate.m in Sources */,
 				A947F3A817ACCF7F002010C2 /* main.m in Sources */,
+				A947F3D417ACD0A9002010C2 /* OrgChart.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,9 +385,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OrgChart/OrgChart-Prefix.pch";
 				INFOPLIST_FILE = "OrgChart/OrgChart-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -387,9 +400,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "OrgChart/OrgChart-Prefix.pch";
 				INFOPLIST_FILE = "OrgChart/OrgChart-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 			};
@@ -464,6 +479,19 @@
 			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A947F3D217ACD0A9002010C2 /* OrgChart.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A947F3D317ACD0A9002010C2 /* OrgChart.xcdatamodel */,
+			);
+			currentVersion = A947F3D317ACD0A9002010C2 /* OrgChart.xcdatamodel */;
+			path = OrgChart.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A947F39017ACCF7E002010C2 /* Project object */;
 }
