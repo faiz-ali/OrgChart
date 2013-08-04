@@ -18,5 +18,8 @@
 
 - (void)saveContext;
 - (NSURL *)applicationDocumentsDirectory;
+- (void)createData;
+- (void)readData;
+- (void)displayPerson:(NSManagedObject*)person withIndentation:(NSString*)indentation;
 
 @end
